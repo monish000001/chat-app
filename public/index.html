@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Realtime Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="chat-app">
+
+    <!-- HEADER -->
+    <div class="chat-header">
+        <div class="left-header">
+            <div class="avatar"></div>
+            <div>
+                <h3 id="roomName">Live Chat</h3>
+                <span class="status">Connected</span>
+            </div>
+        </div>
+
+        <div class="right-header">
+            Online: <span id="userCount">0</span>
+        </div>
+    </div>
+
+    <!-- MESSAGES -->
+    <ul id="messages"></ul>
+
+    <!-- TYPING INDICATOR -->
+    <div id="typing" class="typing-indicator"></div>
+
+    <!-- INPUT -->
+    <form id="form" class="chat-input">
+        <input id="input" placeholder="Type a message..." autocomplete="off" />
+        <button type="submit">Send</button>
+    </form>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
